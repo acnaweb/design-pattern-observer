@@ -1,5 +1,7 @@
 package br.com.marketmining.study_observer;
 
+import java.util.Map;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -10,9 +12,13 @@ public class Main {
 
 		for (int i = 1; i <= 3; i++) {
 			try {
+				// parametros opcionais a serem enviados ao observer
+				Map<String, Object> parametros = null;
+				
+				// observer atualiza/consulta os dados
+				fonteDeDados.update(parametros);
 
-				fonteDeDados.refresh();
-
+				// intervalo de atualizacao dos dados
 				Thread.sleep(2000);
 			} catch (Exception e) {
 				System.out.println(e);
