@@ -6,6 +6,7 @@ public class Main {
 		FonteDeDadosObservable fonteDeDados = new FonteDeDadosObservable();
 
 		Consumidor1Observer consumidor1 = new Consumidor1Observer(fonteDeDados);
+		Consumidor2Observer consumidor2 = new Consumidor2Observer(fonteDeDados);
 
 		for (int i = 1; i <= 3; i++) {
 			try {
